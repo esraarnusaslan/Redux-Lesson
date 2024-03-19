@@ -1,7 +1,7 @@
 import store from '../store';
 import { changeLang } from '../store/slices/locale-slice';
 
-let langFile = require(`../helpers/langs/en.json`);
+let langFile = require(`./langs/en.json`);
 
 export const langs = [
     { name: 'English', code: 'en', country: 'gb' },
