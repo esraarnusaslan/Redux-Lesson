@@ -1,25 +1,13 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import { store } from './store';
+import AppRouterProvider from './router';
+import { useSelector } from 'react-redux';
 
 const App = () => {
+    const lang = useSelector((state) => state.locale.lang);
     return (
-        <Provider store={store}>
-            <div>
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-
-                    <li>
-                        <Link to="/">About</Link>
-                    </li>
-                    <li>
-                        <Link to="/">Contact</Link>
-                    </li>
-                </ul>
-            </div>
-        </Provider>
+        <>
+            <AppRouterProvider key={lang.code} />
+        </>
     );
 };
 
