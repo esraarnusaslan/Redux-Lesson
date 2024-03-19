@@ -6,7 +6,7 @@ const Properties = () => {
     return (
         <Container>
             <h2 className="text-center">{$t('properties')}</h2>
-            <Row>
+            <Row className='d-flex gap-5 mt-5'>
                 <Col md={3}>
                     <Card>
                         <Card.Img src="/images/property-1.png" />
